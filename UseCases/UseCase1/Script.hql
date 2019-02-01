@@ -3,7 +3,7 @@ row format delimited
 fields terminated by ','
 stored as textfile;
 
-load data local inpath '/home/cloudera/Desktop/Slave.csv' into table employee;
+load data local inpath '/home/cloudera/Desktop/employee.csv' into table employee;
 
 
 create table master(Description string,completion_date string)
@@ -11,7 +11,7 @@ row format delimited
 fields terminated by ','
 stored as textfile;
 
-load data local inpath '/home/cloudera/Desktop/MAster.csv' into table master;
+load data local inpath '/home/cloudera/Desktop/holiday.csv' into table master;
 
 SET hive.auto.convert.join=false;
 
