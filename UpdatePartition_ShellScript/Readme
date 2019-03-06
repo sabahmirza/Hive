@@ -1,3 +1,13 @@
+Problem Statement:
+---------------------------
+We have a partitioned table 'base_emp', partitioned on one column called dept.
+We get data on daily basis for different department. The requirement is as below:
+While inserting the new records to base_emp table, 
+1. if the partition is already there for any dept in new records then the older partition should be overwritten
+2. If any new dept is present in new records, then corresponding partition should be created
+3. If some partition for any dept is already there in base_emp table and there is no records for the same dept in new records, 
+then that partition should remain untouched.
+-----------------------------------------------------------------------------------------------------------------------------------
 Data Preparation:
 
 create database if not exists sample;
