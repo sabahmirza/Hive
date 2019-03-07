@@ -33,3 +33,7 @@ partitioned by (dept String)
 row format delimited
 fields terminated by ','
 stored as textFile;
+
+
+--First Time data Insertion
+insert overwrite table base_emp select * from temp_emp;
